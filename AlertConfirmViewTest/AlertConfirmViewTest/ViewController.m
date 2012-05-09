@@ -34,13 +34,12 @@
 
 - (IBAction)showDialogAction
 {
-	AlertConfirmView *view = [[AlertConfirmView alloc] initWithText:@"Are you ready?"
-														   delegate:self
-														   okAction:^{
-															   NSLog(@"OK Action");
-														   }cancelAction:^{
-															   NSLog(@"Cancel Action");
-														   }];
+	AlertConfirmView *view = [[AlertConfirmView alloc]
+							  initWithText:@"Are you ready?"
+							  delegate:self
+							  okAction:^{ NSLog(@"OK Action"); }
+							  cancelAction:^{ NSLog(@"Cancel Action"); }
+							  ];
 	[view show];
 	[view autorelease];
 }
